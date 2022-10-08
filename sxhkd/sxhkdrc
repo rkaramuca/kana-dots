@@ -23,6 +23,15 @@ super + b
     firefox
 
 #
+# audio control
+#
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#
 # bspwm hotkeys
 #
 
@@ -123,6 +132,10 @@ super + alt + {h,j,k,l}
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# reset windows to default size
+super + alt + n 
+    bspc node @/ -E
 
 # move a floating window
 super + {Left,Down,Up,Right}
