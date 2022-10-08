@@ -12,6 +12,12 @@ xsetroot -cursor_name left_ptr
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+# colors
+bspc config normal_border_color     '#0906180'
+bspc config active_border_color     '#c0a36e'
+bspc config focused_border_color    '#c0a36e'
+bspc config presel_feedback_color   '#c0a36e'
+
 # Window Config
 bspc config border_width            2
 bspc config window_gap              8
